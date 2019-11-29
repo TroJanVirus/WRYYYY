@@ -1,0 +1,33 @@
+<html>
+<head>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Counter: " + localStorage.clickcount + " WRYYYYYYY's.";
+  } else {
+    document.getElementById("result").innerHTML = "DAMN U DAMN U DAMN U, your browser does not support web storage...";
+  }
+}
+</script>
+</head>
+
+
+
+<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
+
+<img src="dio.png" class="dio" alt="WRYYY" onclick="document.getElementById('1').play();clickCounter();">
+<audio id="1" src="1.wav"></audio>
+<p><div id="result"></div></p>
+
+<div class="fb-comments" data-href="https://frosty-banach-84efcd.netlify.com/" data-width="" data-numposts="10"></div>
+<div class="fb-share-button" data-href="https://frosty-banach-84efcd.netlify.com/" data-layout="box_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffrosty-banach-84efcd.netlify.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+</body>
+</html>
